@@ -3,13 +3,14 @@
 *{
     /* border: solid red 1px; */
     font-family: poppins;
+    overflow: hidden;
 }
 
 body{
     margin: 0;
     padding: 0;
     background: #44397A;
-    overflow: hidden;
+
 }
 
 .change{
@@ -160,6 +161,15 @@ body{
 .notes{
     animation: spinning 25s linear infinite;
 }
+notes{
+    position: absolute; 
+    color: white; 
+    font-size: 1vw; 
+    font-weight: 300; 
+    
+    overflow: hidden;
+}
+
 
 @keyframes melayang {
     0%{
@@ -192,11 +202,16 @@ body{
     }
     100%{
         opacity: 0;
-        transform: translateX(-600px);
+        transform: translateX(-1400px);
     }
 }
 
 @media screen and (max-width: 800px) {
+    .notes{
+        font-size: 2vw;
+        color: white;
+ 
+    }
     .login-form{
         width: 80%;
     }
