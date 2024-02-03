@@ -4,6 +4,7 @@
     /* border: solid red 1px; */
     font-family: poppins;
     overflow: hidden;
+    overflow-x: hidden;
 }
 
 body{
@@ -158,16 +159,14 @@ body{
     border-radius: 0px 0px 10px 0px;
 }
 
+
 .notes{
-    animation: spinning 25s linear infinite;
-}
-notes{
-    position: absolute; 
+    position: relative; 
     color: white; 
     font-size: 1vw; 
     font-weight: 300; 
-    
-    overflow: hidden;
+    top: 4vh;
+    animation: makan 25s linear infinite;
 }
 
 
@@ -192,7 +191,7 @@ notes{
     }
 }
 
-@keyframes spinning {
+@keyframes makan {
     0%{
         opacity: 0;
         transform: translateX(1400px);
@@ -229,10 +228,11 @@ notes{
 
 @media screen and (max-width: 800px) {
     .notes{
+        overflow: hidden;
         font-size: 4vw;
         width: max-content;
         top: 5vh;
-        position: absolute;
+        position: relative;
         display: inline-block;
         color: white;
         animation: spinningMobile 10s linear infinite;
